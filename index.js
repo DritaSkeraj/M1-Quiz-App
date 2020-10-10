@@ -63,9 +63,7 @@ function evaluateAnswers(){
     let givenAns = [];
     for(let i=0; i<questions.length; i++){
         let answ = document.querySelectorAll("input[type=radio]:checked")[i].value;
-        //if(answ){
             givenAns.push(answ);
-        //} else givenAns.push('-');
     }
     console.log('all the given answers here: ', givenAns);
 
@@ -198,8 +196,3 @@ function evaluateAnswers(){
         submitBtn.onclick = evaluateAnswers;
         container.appendChild(submitBtn);
       };
-
-      //HOW TO calculate the result
-      //You can do it in 2 ways:
-      //If you are presenting all questions together, just take all the radio buttons and check if the selected answer === correct_answer
-      //If you are presenting one question at a time, just add one point or not to the user score if the selected answer === correct_answer
